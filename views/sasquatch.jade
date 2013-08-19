@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  a(href='http://vancouver.en.craigslist.ca/search/?areaID=16&subAreaID=&query=sasquatch&catAbb=sss') Craigslist Search Link
+  ul
+    each tik in tix
+      li.clearfix(class= new Date().getTime() - tik.date.getTime() < 2 * 60 * 1000 ? "new" : "")
+        div.title= tik.title.text()
+        div.price= tik.price
+        div.email= tik.email
+        - var d = new Date()
+        - d.setTime(tik.date.getTime() - 3600000*7)
+        div.date= d.toUTCString()
