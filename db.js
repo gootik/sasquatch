@@ -73,9 +73,4 @@ DB.prototype = {
   }
 };
 
-// new ArticleProvider().save([
-//   {title: 'test1', body: 'body1', comments:[{author:'a', comment: 'ac'}, {author:'b', comment:'bc'}]},
-//   {title: 'test2', body: 'body2'}
-//   ], function(err, articles){});
-
 exports.DB = new DB();
